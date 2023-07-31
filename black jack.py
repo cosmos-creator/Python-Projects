@@ -7,7 +7,6 @@
 def black_jack():
     from random import randint
     import time
-    from IPython.display import clear_output
     
     player_draw_1 = randint(1,11)
     player_draw_2 = randint(1,11)
@@ -37,10 +36,10 @@ def black_jack():
             print("Its a draw")
             return None
         elif player_total ==21:
-            print("player wins")
+            print("Player wins")
             return None
         elif dealer_total ==21:
-            print("dealer wons")
+            print("Dealer wins!")
             return None
         decision = input("Will you draw another card or stay? [Draw : Y | Stay : N] :")
         while decision.lower() == 'y':
@@ -76,10 +75,10 @@ def black_jack():
                 dealer_draws+=1
                 dealer_total+=dealer_draw
                 if dealer_total == 21:
-                    print("Dealer won")
+                    print("Dealer won!")
                     return None
                 elif dealer_total >21:
-                    print("dealer busted")
+                    print("Dealer busted!")
                     return None
                 
             print(f"Dealer hand is at {dealer_total}, he will stand \n")
