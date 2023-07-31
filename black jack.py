@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[3]:
-
-
 def black_jack():
     from random import randint
     import time
@@ -147,15 +141,4 @@ def black_jack():
         print("You lost!")
         return None
 
-
-# In[5]:
-
-
 black_jack()
-
-
-# In[ ]:
-
-
-
-
