@@ -1,3 +1,15 @@
+'''
+RULES :
+
+Both player and the dealer gets 2 cards in hand
+if the sum reaches 21 for either of them then it is a smooth win for the on who got 21 as the first draws
+otherwise if the sum exceeds 21 its a win for the opponent
+and if the dealer is at 17 he won't draw another card i.e he will stay/stand then it depends upon the player whether he/she chooses to draw a card or not
+if the dealer has 17 or greater and you have less than him and you choos to stay then its a win for dealer
+likewise if the dealer has 17 or greater and you draw greater then him then its your win
+
+    HAPPY WINING!
+'''
 def black_jack():
     from random import randint
     import time
