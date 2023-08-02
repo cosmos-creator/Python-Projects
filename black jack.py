@@ -40,7 +40,7 @@ def black_jack():
             player_draws+=1
             draw = randint(1,11)
             player_total+=draw
-            print("Card drawn",draw)
+            print("Card drawn : ",draw)
             print("Total : ",player_total)
             decision = ''
             if player_total<21:
@@ -72,6 +72,7 @@ def black_jack():
                     print("Dealer won!")
                     return None
                 elif dealer_total >21:
+                    print("You win!")
                     print("Dealer busted!")
                     return None
                 
