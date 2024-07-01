@@ -18,7 +18,7 @@ def won(board):
                     [2,4,6]]
     #loop to check the board with the conditons
     for i in winningBoard:
-        #check if the marks are in a sequnce of 3, either in rows and columns or diagonally
+        #check if the marks are in a sequence of 3, either in rows, columns or diagonals
         if (board[i[0]] == board[i[1]]) and (board[i[1]] == board[i[2]]):
             return True
     return False
@@ -38,7 +38,7 @@ def tictactoe():
         print("Player 1's turn.")
         p1 = int(input("Enter a position to replace with X : ")) 
         # validate the position
-        # if true then change the values in the positions list wrt to the entered index.
+        # if true then change the values in the positions list w.r.t to the entered index.
         if p1 in positions and positions[p1] != "O" and positions[p1] != "X":
             positions[positions.index(p1)] = "X"
             i += 1
@@ -48,7 +48,7 @@ def tictactoe():
                 print("Player 1 wins!")
                 exit(1) # stop the code if won
             board(positions) # print the board for the second user's turn
-            ifDraw(i) # check for draw i.e check if the turns has been played 9 times.
+            ifDraw(i) # check for draw i.e check if the game has been played 9 times.
             while True: # loop for the second users turn.
                 clear('cls') # clear the screen for the second user
                 print("Player 2's turn.")
@@ -67,7 +67,7 @@ def tictactoe():
                     clear('cls')
                     break
                     
-                # if invalid input ask for their input again untill a valid input is entered.
+                # if invalid input, ask for their input again untill a valid input is entered.
                 else:
                     print("Invalid position. Try Again.")
                     sleep(5)
