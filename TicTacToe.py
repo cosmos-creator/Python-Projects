@@ -29,11 +29,11 @@ def ifDraw(i):
             exit(0)
 
 def tictactoe():
-    from time import sleep #sleep function to add delay in the clearing of the board for the user experience.
-    from os import system as clear #to clear the terminal screen of the board,
-    i = 0                          #clear alias because this seemed a bit more intuitive.
+    from time import sleep #sleep function to add delay in the clearing of the board.
+    from os import system as clear #to clear the terminal screen off the board,
+    i = 0                          #clear alias it's a bit more intuitive.
     positions = list(range(0,9))
-    while ( i < 9 ): # loop to run for exactly 9 times.
+    while ( i < 9 ): # loop to run for 9 turns.
         board(positions) # pass the positions in the function and print the board.
         print("Player 1's turn.")
         p1 = int(input("Enter a position to replace with X : ")) 
@@ -42,11 +42,11 @@ def tictactoe():
         if p1 in positions and positions[p1] != "O" and positions[p1] != "X":
             positions[positions.index(p1)] = "X"
             i += 1
-            clear('cls') # clear the output screen
-            if won(positions): # check for win after every turn
+            clear('cls') # clear the terminal window
+            if won(positions): # check for win
                 board(positions)
                 print("Player 1 wins!")
-                exit(1) # stop the code if won
+                exit(1)
             board(positions) # print the board for the second user's turn
             ifDraw(i) # check for draw i.e check if the game has been played 9 times.
             while True: # loop for the second users turn.
@@ -54,10 +54,10 @@ def tictactoe():
                 print("Player 2's turn.")
                 board(positions) # print board
                 p2 = int(input("Enter a position to replace with O : ")) # take index value for the input
-                # validate the user input
+                # validate the input
                 if (p2 in positions) and positions[p2] != "O" and positions[p2] != "X":
                     positions[positions.index(p2)] = "O"
-                    i += 1 # after every successful turn increment i by 1
+                    i += 1 # increment after every successful turn
 
                     #check if user has won
                     if won(positions):
@@ -70,12 +70,12 @@ def tictactoe():
                 # if invalid input, ask for their input again untill a valid input is entered.
                 else:
                     print("Invalid position. Try Again.")
-                    sleep(5)
+                    sleep(2)
                     clear('cls')
                     continue
         else:
             print("Invalid position. Try Again.")
-            sleep(5)
+            sleep(2)
             clear('cls')    
 # play the game :)
 tictactoe()
